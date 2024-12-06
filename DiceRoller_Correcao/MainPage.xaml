@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiceRoller_Correcao.MainPage">
+    <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+        <Label
+            Text="Rolador de Dados"
+            FontSize="Large"
+            HorizontalOptions="Center"/>
+
+        <Label
+            x:Name="ResultLabel"
+            HorizontalOptions="Center"
+            Text="0"
+            FontSize="Large"/>
+
+        <Picker x:Name="SelecionarPicker">
+            <Picker.Items>
+                <x:String>4</x:String>
+                <x:String>6</x:String>
+                <x:String>8</x:String>
+                <x:String>10</x:String>
+                <x:String>12</x:String>
+                <x:String>20</x:String>
+            </Picker.Items>
+        </Picker>
+        
+        <Label
+            Text="Digite a quantidade de dados a serem sorteados"/>
+        
+        <Entry
+            x:Name="QuantidadeEntry"
+            Keyboard="Numeric"/>
+
+        <Picker
+            x:Name="modificadoresPicker">
+            <Picker.Items>
+                <x:String>+1</x:String>
+                <x:String>+2</x:String>
+                <x:String>+3</x:String>
+                <x:String>+4</x:String>
+                <x:String>+5</x:String>
+                <x:String>+6</x:String>
+            </Picker.Items>
+        </Picker>
+        <Button
+            x:Name="RollButton"
+            Text="Rolar o dado" 
+            Clicked="RollButton_Clicked"
+            HorizontalOptions="Fill" />
+
+        <Label
+            x:Name="ResultadosLabel"
+            Text=""/>
+    </VerticalStackLayout>
+</ContentPage>
